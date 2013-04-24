@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Chap4Exercises"/>
+	<classpathentry kind="src" path="Chap5Exercises"/>
+	<classpathentry kind="src" path="Chap6Exercises"/>
+	<classpathentry kind="src" path="CS106aSectionAssignments"/>
+	<classpathentry kind="src" path="Chap9Exercises"/>
+	<classpathentry kind="src" path="CS106classHandouts"/>
+	<classpathentry kind="src" path="Chap10Excercises"/>
+	<classpathentry kind="src" path="Chap8Exercises"/>
+	<classpathentry kind="src" path="Chap12Exercises"/>
+	<classpathentry kind="src" path="Chap11Exercises"/>
+	<classpathentry kind="src" path="Chap13Exercises"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="acm.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

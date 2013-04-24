@@ -1,0 +1,27 @@
+/**
+ * Auto Generated Java Class.
+ */
+/*
+ * File: Chap4Ex1.java
+ * -------------------
+ * List out lyrics of song 99 bottles of beer on the
+ * wall while changing the number. All use a constant other
+ * than 99 as the initial number of bottles. 
+ */
+
+import acm.progam.*;
+
+public class Chap4Ex1 extends ConsoleProgram {
+    
+    public void run() {
+        for (i = BOTTLES; i > 0; i--) {
+            println(BOTTLES + "bottles of beer on the wall.");
+            println(BOTTLES + "bottles of beer.");
+            println("You take one one down, pass it around.");
+            BOTTLES -= 1;
+            println(BOTTLES + "bottles of beer on the wall.");
+            println();
+        }
+        
+    
+}
