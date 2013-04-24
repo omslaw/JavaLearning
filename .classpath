@@ -11,7 +11,7 @@
 	<classpathentry kind="src" path="Chap12Exercises"/>
 	<classpathentry kind="src" path="Chap11Exercises"/>
 	<classpathentry kind="src" path="Chap13Exercises"/>
-	<classpathentry kind="src" path="Assignment3"/>
+	<classpathentry kind="src" path="Assignment3_Breakout"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="acm.jar"/>
 	<classpathentry kind="output" path="bin"/>
