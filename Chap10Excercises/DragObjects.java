@@ -14,6 +14,8 @@ import acm.program.*;
 import java.awt.event.*;
 import java.awt.*;
 
+import javax.swing.JButton;
+
 /* This class displays a mouse-draggable rectangle and oval */
 public class DragObjects extends GraphicsProgram {
 	
