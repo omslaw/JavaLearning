@@ -27,6 +27,7 @@ public class AddIntegerList extends ConsoleProgram {
 			total += value;
 		}
 		println("The total is " + total + ".");
+		// this is from gaming pc
 	}
 	
 /* Specifies the value of the sentinel */
