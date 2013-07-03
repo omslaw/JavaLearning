@@ -87,15 +87,18 @@ public class Breakout extends GraphicsProgram {
 			println("what is double x" + (e.getX() - PADDLE_WIDTH));
 			println("what is x of object " + gobj.getX());
 			double xLoc = gobj.getX();
-			if (xLoc <= 0) {
+			/*if (xLoc <= 0) {
 				gobj.move(0, 0);
 			}
-			else if ((xLoc + PADDLE_WIDTH) >= WIDTH) {
+			if ((xLoc + PADDLE_WIDTH) >= WIDTH) {
 				int edge = WIDTH - PADDLE_WIDTH;
 				gobj.move((WIDTH - PADDLE_WIDTH), 0);
-			} else {
-			gobj.move(x, 0);
+			}*/ 
+			if (xLoc >= WIDTH) {
+				gobj.move((WIDTH - PADDLE_WIDTH), 0);
 			}
+			gobj.move(x, 0);
+			
 			last = new GPoint(e.getPoint());
 		}
 	}

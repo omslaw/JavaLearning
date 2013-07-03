@@ -16,7 +16,15 @@ public class HitchhikerButton extends ConsoleProgram {
 	
 	/* Initializes the user-interface buttons */
 	public void init() {
-		add(new JButton("Red"), SOUTH);
+		
+		ImageIcon icon = new ImageIcon("steel.jpg");
+		//JButton button = new JButton(icon);
+		JButton button = new JButton("button");
+		button.setActionCommand("Red");
+		add(button, SOUTH);
+		
+		
+		//add(new JButton("Red"), SOUTH);
 		addActionListeners();
 	}
 	
