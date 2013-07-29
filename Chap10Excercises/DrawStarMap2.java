@@ -21,7 +21,7 @@ public class DrawStarMap2 extends GraphicsProgram {
 	
 	/* Initializes the graphical user interface */
 	public void init() {
-		setBackground(Color.BLACK);
+		setBackground(Color.GRAY);
 		add(new JButton("Clear"), SOUTH);
 		sizeSlider = new JSlider(MIN_SIZE, MAX_SIZE, INITIAL_SIZE);
 		add(new JLabel("Small"), NORTH);
