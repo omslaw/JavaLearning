@@ -3,6 +3,7 @@ import java.awt.GridLayout;
 
 import javax.swing.JButton;
 
+import acm.gui.TableLayout;
 import acm.program.Program;
 
 /**
