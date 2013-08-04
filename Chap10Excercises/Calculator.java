@@ -85,7 +85,95 @@ public class Calculator extends Program {
 			startNewValue = false;
 			op = null;
 		}
+	
+	
+	/* Adds a digit to the display, clearing the old value if startNewValue is set */
+	public void addDigit(int digit) {
+		int value = (startNewValue) ? 0 : getValue();
+		setValue(10 * value + digit);
+		startNewValue = false;
 	}
+	
+	/* Sets a new operator, applying the previous one if one exists */
+	public void setOperator(OperatorButton button) {
+		if (op == null) {
+			memory = getValue();
+		} else {
+			memory = op.apply(memory, getValue());
+			setValue(memory);
+		}
+		op = button;
+		startNewValue = true;
+	}
+	
+	/* Private instance variables */
+	private OperatorButton op;  	/* The last operator button pressed */
+	private int memory;				/* The value to which the operator is applied */
+	private boolean startNewValue;	/* Set after an operator to start a new value */
+	}
+	
+	/*
+	 * This abstract class is the superclass for every calculator button. Every button 
+	 * must define an action method, which is called whenever the buttons is clicked.
+	 */
+	abstract class CalculatorButton extends JButton {
+		
+		/* Creates a new CalculatorButton with the specified name */
+		public CalculatorButton(String name) {
+			super(name);
+			setFont(new Font("SansSerif", Font.PLAIN, 24));
+		}
+		/* Called when the button is clicked (every subclass must implement this method) */
+		public abstract void action(CalculatorDisplay display);
+	}
+	
+	/*
+	 * This class is sued for each of the digit buttons. The action consists of 
+	 * adding the digit used as a label on the button, which is returned by getText.o
+	 */
+	class DigitButton extends CalculatorButton {
+		
+		/* Creates a new DigitButton for the digit n */
+		public DigitButton(int n) {
+			super("" + n);
+		}
+		
+		/* Adds this digit to the display */
+		public void action(CalculatorDisplay display) {
+			display.addDigit(Integer.parseInt(getText()));
+		}
+	}
+	
+	/*
+	 * This abstract class is the superclass of the various operator buttons.
+	 * Each concrete subclass must override the apply method.
+	 */
+	abstract class OperatorButton extends CalculatorButton {
+		
+		/* Creates a new OperatorButton with the specified name */
+		public OperatorButton(String name) {
+			super(name);
+		}
+		
+		/* Informs the display that this operator button has been clicked */
+		public void action(CalculatorDisplay display) {
+			display.setOperator(this);
+		}
+		
+		/* Applies this operator (every subclass must implement this method) */
+		public abstract int apply(int lhs, int rhs);
+	}
+	
+	/*
+	 * The classes AddButton, SubtractButton, MultiplyButton, and DivideButton
+	 * are the same except for their label and the implementation of apply.
+	 */
+	
+	class AddButton extends OperatorButton {
+		public AddButton() { super("+"); }
+		public int apply(int)
+	}
+	
 	
 	
 	
