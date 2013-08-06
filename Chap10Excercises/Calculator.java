@@ -11,7 +11,7 @@ import javax.swing.*;
  *
  */
 
-/** This program implements a simple four-funcion calculator */
+/** This program implements a simple four-function calculator */
 
 public class Calculator extends Program {
 
@@ -54,9 +54,11 @@ public class Calculator extends Program {
 	}
 	
 	/* Private constants and instance variables */
-	private static final int BUTTON_SIZE = 40;
+	private static final int BUTTON_SIZE = 55;
 	private CalculatorDisplay display;
 	
+}
+
 	/*
 	 * This class defines the display for the calculator. 
 	 * 
@@ -171,13 +173,50 @@ public class Calculator extends Program {
 	
 	class AddButton extends OperatorButton {
 		public AddButton() { super("+"); }
-		public int apply(int)
+		public int apply(int lhs, int rhs) { return lhs + rhs; }
 	}
 	
+	class SubtractButton extends OperatorButton {
+		public SubtractButton() { super("-"); }
+		public int apply(int lhs, int rhs) { return lhs - rhs; }
+	}
 	
+	class MultiplyButton extends OperatorButton {
+		public MultiplyButton() { super("x"); }
+		public int apply(int lhs, int rhs) { return lhs * rhs; }
+	}
 	
+	class DivideButton extends OperatorButton {
+		public DivideButton() { super("/"); }
+		public int apply(int lhs, int rhs) { return lhs / rhs; }
+	}
 	
+	/*
+	 * The EqualsButton class displays the current value. As it happens, this
+	 * operation can be implemented simply by setting the operator to null.
+	 */
+	class EqualsButton extends CalculatorButton {
+		public EqualsButton() {
+			super("=");
+		}
+		public void action(CalculatorDisplay display) {
+			display.setOperator(null);
+		}
+	}
 	
+	/*
+	 * The ClearButton class resets the calculator by setting the operator to
+	 * null and the display value to 0.
+	 */
+	class ClearButton extends CalculatorButton {
+		public ClearButton() {
+			super("C");
+		}
+		
+		public void action(CalculatorDisplay display) {
+			display.setOperator(null);
+			display.setValue(0);
+		}
+	}
 	
-	
-}
+
