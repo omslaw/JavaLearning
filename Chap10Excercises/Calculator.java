@@ -27,6 +27,7 @@ public class Calculator extends Program {
 	/* Called on each action event; the response is determined by the button */
 	public void actionPerformed(ActionEvent e) {
 		Object source = e.getSource();
+		System.out.print("\npring action performed " + source);
 		if (source instanceof CalculatorButton) {
 			((CalculatorButton) source).action(display);
 		}
