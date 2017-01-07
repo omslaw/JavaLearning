@@ -22,6 +22,7 @@ public class AnimatedSquare extends GraphicsProgram {
 		//double wide = getWidth();
 		//GLabel info = new GLabel(wide, 55, 50);
 		//add(info);
+		//TODO quick test from intellij
 		double dx = (getWidth() - SQUARE_SIZE) / N_STEPS;
 		double dy = (getHeight() - SQUARE_SIZE) / N_STEPS;
 		for (int i = 0; i < N_STEPS; i++) {
